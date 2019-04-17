@@ -9,7 +9,7 @@ filetype plugin on
 " UI interface settings
 set number
 highlight LineNr ctermfg=grey ctermbg=NONE
-" colorscheme vividchalk
+colorscheme slate
 
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
