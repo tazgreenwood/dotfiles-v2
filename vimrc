@@ -1,6 +1,19 @@
 " SIMPLE VIM DEFAULTS
 
+" Plugins Try to keep to minimum
+call plug#begin('~/.vim/bundle')
+
+" Javascript Syntax
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+" Buffer Explorer
+Plug 'jlanzarotta/bufexplorer'
+
+call plug#end()
+
 set nocompatible
+set noswapfile
 
 " enable syntax and plugins (for netrw)
 syntax enable
@@ -8,8 +21,20 @@ filetype plugin on
 
 " UI interface settings
 set number
-highlight LineNr ctermfg=grey ctermbg=NONE
-colorscheme slate
+set nowrap
+set relativenumber
+set expandtab
+set sw=2
+set ts=2
+colorscheme OceanicNext
+set cursorline
+highlight CursorLine term=bold cterm=bold
+highlight Normal ctermbg=NONE
+highlight NonText ctermbg=NONE
+highlight LineNr ctermbg=NONE
+
+" Code helpers
+set autoindent
 
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks

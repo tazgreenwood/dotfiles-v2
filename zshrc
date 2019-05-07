@@ -89,6 +89,8 @@ plugins=(
   git
   z
   osx
+  colorize
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -151,9 +153,6 @@ v() {
 
 alias vimrc="vim ~/.SpaceVim/bin/vimrc"
 alias spacevim="vim ~/.SpaceVim.d/init.toml"
-alias ls="colorls --sd"
-alias lsa="colorls -a --sd"
-alias lsl="colorls -l --sd"
 
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
