@@ -11,6 +11,10 @@ export PATH=/usr/local/Cellar/node/11.8.0/bin/:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+export EDITOR='vim'
+export SPOTIFY_CLIENT_ID=a7e97081f4ec4d129116a3931a27425f
+export SPOTIFY_SECRET=567925cc5cf64e029a65401d12f7a449
+
 export GOPATH=$HOME/go
 export PATH=${PATH}:$GOPATH/bin
 export VAULT_ADDR='https://vault.private.linksynergy.com'
@@ -135,8 +139,6 @@ lsg() {
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-alias emacs="emacs -nw"
-
 dvault() {
   vault kv get "secret/rm-container-config/rm-display-feeds-legacy-processor-prod/merchant-configs/$1"
   source ~/.zshrc
@@ -153,7 +155,4 @@ v() {
 
 alias vimrc="vim ~/.SpaceVim/bin/vimrc"
 alias spacevim="vim ~/.SpaceVim.d/init.toml"
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /Users/taz.greenwood/Projects/Pitch/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/taz.greenwood/Projects/Pitch/node_modules/tabtab/.completions/electron-forge.zsh
+alias mux=tmuxinator

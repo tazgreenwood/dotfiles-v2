@@ -57,3 +57,7 @@
 	trustExitCode = true
 [commit]
 	template = /Users/taz.greenwood/.stCommitMsg
+[url "git@github.rakops.com:"]
+	insteadOf = https://github.rakops.com/
+	insteadOf = https://github.rakops.com/
+	insteadOf = https://github.rakops.com/
