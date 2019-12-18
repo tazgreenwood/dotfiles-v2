@@ -23,7 +23,8 @@ Plug 'scrooloose/nerdtree'
 
 " Autocompletion
 Plug 'valloric/youcompleteme'
-Plug 'zxqfl/tabnine-vim'
+"Plug 'zxqfl/tabnine-vim'
+Plug 'raimondi/delimitmate'
 
 " Fuzzy Finder
 Plug 'ctrlpvim/ctrlp.vim'
@@ -44,6 +45,12 @@ Plug 'vim-airline/vim-airline'
 
 " CSV syntax highlighting
 Plug 'mechatroner/rainbow_csv'
+
+" Commenting
+Plug 'scrooloose/nerdcommenter'
+
+" TOML syntax
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
@@ -153,3 +160,9 @@ let g:ctrlp_working_path_mode = 'rw'
 "   \____/\___|_| |_|\___|_|  \__,_|_\____/ \___|\__|\__|_|_| |_|\__, |___/
 " --------------------------------------------------------------- __/ |----
 "                                                                |___/
+
+" automatically show updates to open files
+set autoread
+
+" format with goimports instead of gofmt
+let g:go_fmt_command = "goimports"

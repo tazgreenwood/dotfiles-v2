@@ -12,8 +12,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 export EDITOR='vim'
-export SPOTIFY_CLIENT_ID=a7e97081f4ec4d129116a3931a27425f
-export SPOTIFY_SECRET=567925cc5cf64e029a65401d12f7a449
 
 export GOPATH=$HOME/go
 export PATH=${PATH}:$GOPATH/bin
@@ -23,22 +21,10 @@ export VAULT_TOKEN=`less ~/.vault-token`
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/taz.greenwood/.oh-my-zsh
 
-source "${HOME}/.zgen/zgen.zsh"
-zgen load miekg/lean
-# if the init script doesn't exist
-if ! zgen saved; then
-
-  # specify plugins here
-  zgen oh-my-zsh
-
-  # generate the init script from plugins above
-  zgen save
-fi
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -148,11 +134,5 @@ alias vlogin="vault login -address=https://vault.private.linksynergy.com -method
 
 alias pi="ssh pi@170.72.18.64 -p 2222"
 
-v() {
-  z $1
-  vim .
-}
-
-alias vimrc="vim ~/.SpaceVim/bin/vimrc"
-alias spacevim="vim ~/.SpaceVim.d/init.toml"
+alias vimrc="vim ~/.vimrc"
 alias mux=tmuxinator
