@@ -1,23 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# MySQL Path
-export PATH=${PATH}:/usr/local/Cellar/mysql@5.6/5.6.40/bin
-
-export PATH=${PATH}:/usr/local/Cellar/node/10.9.0/bin
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-export PATH=/usr/local/Cellar/node/11.8.0/bin/:$PATH
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-export EDITOR='vim'
-
-export GOPATH=$HOME/go
-export PATH=${PATH}:$GOPATH/bin
-export VAULT_ADDR='https://vault.private.linksynergy.com'
-export VAULT_TOKEN=`less ~/.vault-token`
-
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/taz.greenwood/.oh-my-zsh
 
@@ -53,10 +36,10 @@ ZSH_THEME="spaceship"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -76,11 +59,12 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  z
-  osx
   colorize
+  django
+  git
+  osx
   tmux
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,25 +98,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lsl="ls -l"
-
-bfire() {
-	bin/fire $1 new && resque-pool
-}
-
-lsg() {
-	ls | grep $1
-}
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-dvault() {
-  vault kv get "secret/rm-container-config/rm-display-feeds-legacy-processor-prod/merchant-configs/$1"
-  source ~/.zshrc
-}
-
-alias vlogin="vault login -address=https://vault.private.linksynergy.com -method=ldap username=taz.greenwood"
-
-alias pi="ssh pi@170.72.18.64 -p 2222"
-
+alias lsh="ls -lh"
 alias vimrc="vim ~/.vimrc"
 alias mux=tmuxinator
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
